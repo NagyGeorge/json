@@ -18,7 +18,6 @@ def remove_versions_from_json(input_file, output_file):
             content = f.read().strip()
         
         # The file contains JSON objects separated by commas but not wrapped in an array
-        # We need to wrap it in brackets to make it valid JSON
         if not content.startswith('['):
             content = '[' + content + ']'
         
